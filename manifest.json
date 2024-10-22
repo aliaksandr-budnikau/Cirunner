@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "CI1 runner",
+  "version": "1.0",
+  "description": "Adds a button to run CI in PRs",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://bitbucket.org/algosec-tools/*/pull-requests/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
